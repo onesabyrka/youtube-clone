@@ -1,0 +1,116 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: var(--header-height);
+  padding-inline: 16px;
+}
+
+.header-start,
+.header-center,
+.header-form-body,
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.header-burger-button {
+  margin-right: 8px;
+}
+
+.header-logo {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 123px;
+}
+
+.header-form-input {
+  width: 536px;
+  height: var(--input-height);
+  padding-inline: 16px;
+  border: var(--border);
+  border-radius: var(--border-radius-large) 0 0 var(--border-radius-large);
+  outline: none;
+  background-color: transparent;
+  transition: padding-left 0.15s ease;
+
+  &:focus {
+    padding-left: 48px;
+    border-color: #1c62b9;
+    background: url('../../assets/icons/search.svg') left 16px center / 24px 24px no-repeat;
+  }
+}
+
+.header-form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: var(--input-height);
+  border: var(--border);
+  border-radius: 0 var(--border-radius-large) var(--border-radius-large) 0;
+
+  &:hover {
+    background-color: var(--color-gray);
+  }
+}
+
+.header-voice-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--input-height);
+  aspect-ratio: 1;
+  background-color: var(--color-gray-light);
+  border-radius: var(--border-radius-large);
+}
+
+.header-create-button {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  height: var(--input-height);
+  margin-right: 8px;
+  padding-inline: 16px;
+  background-color: var(--color-gray-light);
+  border-radius: var(--border-radius-large);
+
+  span {
+    font-weight: 500;
+    font-size: 14px;
+  }
+}
+
+.header-notifications-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  aspect-ratio: 1;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.header-voice-button,
+.header-create-button,
+.header-notifications-button {
+  &:hover {
+    background-color: var(--color-gray);
+  }
+
+  &:active {
+    background-color: var(--color-gray-dark);
+  }
+}
+
+.header-profile-image {
+  width: 32px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.header-form-body,
+.header-notifications-button {
+  margin-right: 22px;
+}
