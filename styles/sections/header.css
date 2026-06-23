@@ -14,8 +14,32 @@
   align-items: center;
 }
 
-.header-burger-button {
-  margin-right: 8px;
+.header-start,
+.header-actions {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.header-burger-button,
+.header-notifications-button,
+.header-form-button,
+.header-voice-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-burger-button,
+.header-notifications-button {
+  width: 40px;
+  aspect-ratio: 1;
+}
+
+.header-burger-button,
+.header-notifications-button {
+  background-color: transparent;
+  border-radius: 50%;
 }
 
 .header-logo {
@@ -25,8 +49,19 @@
   width: 123px;
 }
 
+.header-center {
+  display: flex;
+  column-gap: 16px;
+  width: 100%;
+  max-width: 536px;
+}
+
+.header-form,
 .header-form-input {
-  width: 536px;
+  flex-grow: 1;
+}
+
+.header-form-input {
   height: var(--input-height);
   padding-inline: 16px;
   border: var(--border);
@@ -43,12 +78,10 @@
 }
 
 .header-form-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 64px;
   height: var(--input-height);
   border: var(--border);
+  border-left: none;
   border-radius: 0 var(--border-radius-large) var(--border-radius-large) 0;
 
   &:hover {
@@ -57,13 +90,10 @@
 }
 
 .header-voice-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: var(--input-height);
   aspect-ratio: 1;
   background-color: var(--color-gray-light);
-  border-radius: var(--border-radius-large);
+  border-radius: 50%;
 }
 
 .header-create-button {
@@ -71,7 +101,6 @@
   align-items: center;
   column-gap: 8px;
   height: var(--input-height);
-  margin-right: 8px;
   padding-inline: 16px;
   background-color: var(--color-gray-light);
   border-radius: var(--border-radius-large);
@@ -82,16 +111,7 @@
   }
 }
 
-.header-notifications-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  aspect-ratio: 1;
-  background-color: transparent;
-  border-radius: 50%;
-}
-
+.header-burger-button,
 .header-voice-button,
 .header-create-button,
 .header-notifications-button {
@@ -108,9 +128,4 @@
   width: 32px;
   aspect-ratio: 1;
   border-radius: 50%;
-}
-
-.header-form-body,
-.header-notifications-button {
-  margin-right: 22px;
 }
