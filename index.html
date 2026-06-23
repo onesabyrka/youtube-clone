@@ -6,5 +6,95 @@
     <title>YouTube Clone</title>
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <div class="header-start">
+        <button class="header-burger-button" type="button" title="Open menu">
+          <img
+            class="header-burger-image"
+            src="./assets/icons/burger-button.svg"
+            alt="Open menu"
+            width="24"
+            height="24"
+          />
+        </button>
+        <a class="header-logo" href="/" title="YouTube Home">
+          <img
+            class="header-logo-image"
+            src="./assets/images/logo.svg"
+            alt="YouTube"
+            width="93"
+            height="20"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <div class="header-center">
+        <form class="header-form" action="/search">
+          <div class="header-form-body">
+            <label class="visually-hidden" for="search">Search</label>
+            <input class="header-form-input" id="search" type="search" placeholder="Search" />
+            <button class="header-form-button" type="submit" title="Search">
+              <img
+                class="header-form-search-image"
+                src="./assets/icons/search.svg"
+                alt="Search"
+                width="24"
+                height="24"
+              />
+            </button>
+          </div>
+        </form>
+
+        <button class="header-voice-button" type="button" title="Search with your voice">
+          <img
+            class="header-voice-image"
+            src="./assets/icons/voice.svg"
+            alt="Search with your voice"
+            width="24"
+            height="24"
+          />
+        </button>
+      </div>
+
+      <div class="header-actions">
+        <button class="header-create-button" type="button" title="Create">
+          <img
+            class="header-create-image"
+            src="./assets/icons/plus.svg"
+            alt="Create"
+            width="24"
+            height="24"
+          />
+          <span>Create</span>
+        </button>
+
+        <button class="header-notifications-button" type="button" title="Notifications">
+          <img
+            class="header-notifications-image"
+            src="./assets/icons/notifications.svg"
+            alt="Notifications"
+            width="24"
+            height="24"
+          />
+        </button>
+
+        <button
+          class="header-profile-button"
+          type="button"
+          title="Appearance and settings"
+          aria-haspopup="true"
+        >
+          <img
+            class="header-profile-image"
+            src="./assets/images/avatar.jpg"
+            alt="User avatar"
+            width="24"
+            height="24"
+          />
+        </button>
+      </div>
+    </header>
+  </body>
 </html>
