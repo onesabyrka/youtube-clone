@@ -8,3 +8,5 @@
 @import './components/content.css';
 @import './components/sidebar.css';
 @import './components/feed-filter.css';
+@import './components/feed.css';
+@import './components/video-card.css';

@@ -1,0 +1,11 @@
+.feed {
+  grid-area: feed;
+  padding-inline: var(--container-padding-x);
+  margin-top: calc(var(--header-height) * 2 + 24px);
+}
+
+.feed__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px 8px;
+}

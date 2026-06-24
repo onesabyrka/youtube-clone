@@ -1,4 +1,7 @@
 .sidebar {
+  position: fixed;
+  grid-area: sidebar;
+  margin-top: var(--header-height);
   padding-inline: 4px;
 }
 

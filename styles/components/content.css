@@ -1,4 +1,7 @@
 .content {
   display: grid;
-  grid-template-columns: 72px 1fr;
+  grid-template-columns: 72px minmax(0, 1fr);
+  grid-template-areas:
+    'sidebar feed-filter'
+    'sidebar feed';
 }

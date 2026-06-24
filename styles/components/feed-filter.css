@@ -1,8 +1,15 @@
 .feed-filter {
+  position: fixed;
+  grid-area: feed-filter;
   display: flex;
   align-items: center;
+  width: 100%;
   height: var(--header-height);
+  margin-top: var(--header-height);
+  margin-left: 72px;
   padding-inline: 24px;
+  background-color: var(--color-light);
+  z-index: 1;
 }
 
 .feed-filter__list {
