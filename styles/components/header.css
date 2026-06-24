@@ -129,8 +129,6 @@
   border-radius: 50%;
 }
 
-/* Адаптив */
-
 @media (min-width: 970px) {
   .header {
     column-gap: 10px;

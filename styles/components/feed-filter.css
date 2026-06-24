@@ -1,0 +1,43 @@
+.feed-filter {
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+  padding-inline: 24px;
+}
+
+.feed-filter__list {
+  display: flex;
+  column-gap: 12px;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.feed-filter__item {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.feed-filter__button {
+  white-space: nowrap;
+  height: 32px;
+  padding-inline: 12px;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: var(--color-gray-light);
+  border-radius: var(--border-radius-smaller);
+
+  &:active {
+    background-color: var(--color-gray);
+  }
+
+  &.is-current {
+    color: var(--color-light);
+    background-color: var(--color-dark);
+  }
+}
