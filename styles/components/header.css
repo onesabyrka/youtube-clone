@@ -7,92 +7,86 @@
   padding-inline: 16px;
 }
 
-.header-start,
-.header-center,
-.header-form-body,
-.header-actions {
+.header__start,
+.header__center,
+.header__form-body,
+.header__actions {
   display: flex;
   align-items: center;
 }
 
-.header-start,
-.header-actions {
-  display: flex;
-  align-items: center;
+.header__start,
+.header__actions {
   column-gap: 8px;
 }
 
-.header-burger-button,
-.header-notifications-button,
-.header-form-button,
-.header-voice-button {
+.header__burger-button,
+.header__notifications-button,
+.header__form-button,
+.header__voice-button {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.header-burger-button,
-.header-notifications-button {
+.header__burger-button,
+.header__notifications-button {
   width: 40px;
   aspect-ratio: 1;
-}
-
-.header-burger-button,
-.header-notifications-button {
   background-color: transparent;
   border-radius: 50%;
 }
 
-.header-logo {
+.header__logo {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 123px;
 }
 
-.header-center {
+.header__center {
   display: flex;
   column-gap: 8px;
 }
 
-.header-form,
-.header-form-input {
+.header__form,
+.header__form-input {
   flex-grow: 1;
 }
 
-.header-form-input {
+.header__form-input {
   height: var(--input-height);
   padding-inline: 16px;
   border: var(--border);
   border-radius: var(--border-radius-large) 0 0 var(--border-radius-large);
   outline: none;
   background-color: transparent;
-
-  &:focus {
-    border-color: #1c62b9;
-  }
 }
 
-.header-form-button {
+.header__form-input:focus {
+  border-color: #1c62b9;
+}
+
+.header__form-button {
   width: 64px;
   height: var(--input-height);
   border: var(--border);
   border-left: none;
   border-radius: 0 var(--border-radius-large) var(--border-radius-large) 0;
-
-  &:hover {
-    background-color: var(--color-gray);
-  }
 }
 
-.header-voice-button {
+.header__form-button:hover {
+  background-color: var(--color-gray);
+}
+
+.header__voice-button {
   height: var(--input-height);
   aspect-ratio: 1;
   background-color: var(--color-gray-light);
   border-radius: 50%;
 }
 
-.header-create-button {
+.header__create-button {
   display: flex;
   align-items: center;
   column-gap: 8px;
@@ -100,50 +94,53 @@
   padding-inline: 16px;
   background-color: var(--color-gray-light);
   border-radius: var(--border-radius-large);
-
-  span {
-    font-weight: 500;
-    font-size: 14px;
-  }
 }
 
-.header-burger-button,
-.header-voice-button,
-.header-create-button,
-.header-notifications-button {
-  &:hover {
-    background-color: var(--color-gray);
-  }
-
-  &:active {
-    background-color: var(--color-gray-dark);
-  }
+.header__create-button span {
+  font-weight: 500;
+  font-size: 14px;
 }
 
-.header-burger-button,
-.header-logo,
-.header-create-button,
-.header-notifications-button,
-.header-profile-button {
+.header__burger-button:hover,
+.header__voice-button:hover,
+.header__create-button:hover,
+.header__notifications-button:hover {
+  background-color: var(--color-gray);
+}
+
+.header__burger-button:active,
+.header__voice-button:active,
+.header__create-button:active,
+.header__notifications-button:active {
+  background-color: var(--color-gray-dark);
+}
+
+.header__burger-button,
+.header__logo,
+.header__create-button,
+.header__notifications-button,
+.header__profile-button {
   flex-shrink: 0;
 }
 
-.header-profile-image {
+.header__profile-image {
   width: 32px;
   aspect-ratio: 1;
   border-radius: 50%;
 }
+
+/* Адаптив */
 
 @media (min-width: 970px) {
   .header {
     column-gap: 10px;
   }
 
-  .header-start {
+  .header__start {
     column-gap: 4px;
   }
 
-  .header-center {
+  .header__center {
     column-gap: 16px;
     width: 100%;
     max-width: 536px;
@@ -151,24 +148,24 @@
 }
 
 @media (max-width: 770px) {
-  .header-logo {
+  .header__logo {
     width: 100px;
   }
 
-  .header-center {
+  .header__center {
     margin-left: auto;
   }
 
-  .header-form-input {
+  .header__form-input {
     display: none;
   }
 
-  .header-form,
-  .header-form-body {
+  .header__form,
+  .header__form-body {
     justify-content: center;
   }
 
-  .header-form-button {
+  .header__form-button {
     width: 40px;
     aspect-ratio: 1;
     border: none;
@@ -176,20 +173,20 @@
     background-color: transparent;
   }
 
-  .header-voice-button {
+  .header__voice-button {
     display: none;
   }
 
-  .header-create-button {
+  .header__create-button {
     width: 40px;
     aspect-ratio: 1;
     padding: 0;
     justify-content: center;
     border-radius: 50%;
     background-color: transparent;
+  }
 
-    span {
-      display: none;
-    }
+  .header__create-button span {
+    display: none;
   }
 }
